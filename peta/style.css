@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fae20c;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 1001;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+#map {
+    height: 100%;
+    flex: 3;
+}
+
+#vessel-list-container {
+    flex: 1;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+    background-color: #f4f4f4;
+}
+
+#vessel-list-container h2 {
+    padding: 0 15px;
+    margin: 15px 0 10px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+/* === GAYA BARU UNTUK GRAFIK & DAFTAR === */
+#chart-container {
+    padding: 15px;
+    background-color: #e9ecef;
+}
+
+#vessel-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.vessel-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+}
+
+.list-item-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.list-item-details {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.list-item-details .name {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.list-item-details .speed {
+    font-size: 0.85em;
+    color: #666;
+}
+
+/* Warna untuk ikon di daftar */
+.icon-bg-default { background-color: #6c757d; }
+.icon-bg-cargo { background-color: #0077b6; }
+.icon-bg-tanker { background-color: #d00000; }
+.icon-bg-fishing { background-color: #2b9348; }
+.icon-bg-sailing { background-color: #f7b801; }
+.icon-bg-passenger { background-color: #9d4edd; }
+
+/* Styling Popup Leaflet (dari sebelumnya) */
+.leaflet-popup-content-wrapper { border-radius: 8px; background: #f8f9fa; }
+.leaflet-popup-content { margin: 15px 20px; font-family: sans-serif; line-height: 1.6; }
+.popup-header { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #dee2e6; }
+.popup-header b { font-size: 1.1em; color: #343a40; }
+.popup-header span { font-size: 0.9em; color: #6c757d; display: block; }
+.popup-details { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 15px; font-size: 0.9em; }
+.popup-details strong { color: #6c757d; font-weight: normal; }
+.popup-details span { font-weight: bold; color: #212529; }
+
+/* Styling Ikon Peta (dari sebelumnya) */
+.vessel-icon svg path { stroke: #ffffff; stroke-width: 0.5; paint-order: stroke; }
+.vessel-icon svg { transition: transform 0.5s ease-out; }
+.icon-default svg path { fill: #6c757d; } .icon-cargo svg path { fill: #0077b6; }
+.icon-tanker svg path { fill: #d00000; } .icon-fishing svg path { fill: #2b9348; }
+.icon-sailing svg path { fill: #f7b801; } .icon-passenger svg path { fill: #9d4edd; }

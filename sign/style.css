@@ -1,0 +1,195 @@
+/* ===== GENERAL STYLES & VARIABLES ===== */
+:root {
+    --page-bg: #f5f5f5;
+    --card-bg: #ffffff;
+    --image-section-bg: #f0f4ff;
+    --primary-blue: #0052ff;
+    --text-dark: #212529;
+    --text-light: #6c757d;
+    --border-color: #dee2e6;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--page-bg);
+    color: var(--text-dark);
+    /* Gunakan flexbox untuk menengahkan kartu login */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== KARTU LOGIN UTAMA ===== */
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Penting agar border-radius berfungsi pada anak elemen */
+}
+
+/* ===== KOLOM KIRI (ILUSTRASI) ===== */
+.image-section {
+    flex-basis: 50%;
+    background-color: var(--image-section-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== KOLOM KANAN (FORMULIR) ===== */
+.form-section {
+    flex-basis: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.form-header a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+.form-header a:hover {
+    text-decoration: underline;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Jarak antar elemen di dalam form */
+    margin-top: 30px;
+}
+
+.form-content h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-content .subtitle {
+    color: var(--text-light);
+    margin-top: -15px; /* Tarik sedikit ke atas */
+}
+
+/* Tombol Social Media */
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.social-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+}
+
+/* Pemisah "Or continue with..." */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+.divider:not(:empty)::before {
+    margin-right: 1em;
+}
+.divider:not(:empty)::after {
+    margin-left: 1em;
+}
+
+/* Input Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.login-form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+.login-form input::placeholder {
+    color: #999;
+}
+.login-form input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 82, 255, 0.1);
+}
+
+/* Tombol Submit */
+.btn-submit {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-submit:hover {
+    background-color: #0044d1;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .login-container {
+        flex-direction: column;
+        max-width: 400px;
+    }
+    .image-section {
+        display: none; /* Sembunyikan gambar di layar kecil */
+    }
+}

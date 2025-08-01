@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="asset/img/logo1.png" type="image/x-icon">
+    <title>Bewais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="asset/img/logo.png" alt="BEWAIS Logo">
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#news">News</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="sign/bewaise.html" class="btn btn-secondary">Sign In</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburgerMenu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <h1>SMART BUOY FOR YOUR COMPANY</h1>
+                    <p>Bring awareness and safety to the heart of your marine operations</p>
+                    <a href="#about" class="btn btn-safe">KEEP SAFE</a>
+                </div>
+                <div class="hero-image">
+                    <img src="asset/img/nah.png" alt="3D Model of a Smart Buoy">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container about-wrapper">
+                <div class="about-left-column">
+                    <div class="about-content">
+                        <h2>ABOUT BEWAIS</h2>
+                        <h3 class="about-headline">
+                            <span class="highlight-bg">Discover</span> the Future of Marine Safety
+                        </h3>
+                        <p class="about-description">
+                            We provide innovative smart buoy technology to monitor marine environments, ensuring operational safety and bringing awareness to every corner of the sea.
+                        </p>
+                        <div class="about-stats">
+                            <div class="user-images">
+                                <img src="https://i.pravatar.cc/40?img=1" alt="User 1">
+                                <img src="https://i.pravatar.cc/40?img=2" alt="User 2">
+                                <img src="https://i.pravatar.cc/40?img=3" alt="User 3">
+                            </div>
+                            <div class="stats-text">
+                                <strong>4.2M</strong>
+                                <span>Data points processed daily</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right-column">
+                    <div class="about-image-container">
+                        <img src="asset/img/nah.png" alt="Bewais Smart Buoy in action">
+                    </div>
+                    <div class="about-badge">
+                        <span>GET</span>
+                        <div class="arrow-circle">→</div>
+                        <span>STARTED</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="monitoring container" id="fitur">
+    <div class="monitoring-header">
+        <h2>Live Monitoring Map</h2>
+        <p>Lacak pergerakan kapal secara real-time pada peta interaktif kami, lengkap dengan informasi detail dan lapisan zona keselamatan.</p>
+    </div>
+
+    <div class="map-embed-container">
+        <iframe src="peta/index.html" class="map-iframe"></iframe>
+    </div>
+    
+    <div class="monitoring-action">
+        <a href="peta/index.html" class="btn btn-primary" target="_blank">Buka Peta Layar Penuh</a>
+    </div>
+</section>
+
+        <section class="news-section" id="news">
+            <div class="container">
+                <div class="news-section-header">
+                    <h2>Today's Headlines</h2>
+                </div>
+                <div class="news-layout-wrapper">
+                    <div class="news-left-column">
+                        <div class="featured-article-card">
+                            <div class="featured-article-image">
+                                <img src="asset/img/beritaini.jpg" alt="Ilustrasi berita utama">
+                            </div>
+                            <div class="featured-article-content">
+                                <div class="article-meta-top">
+                                    <span class="category-tag">Maritime Safety</span>
+                                    <div class="engagement-stats">
+                                        <span>👁️ 1.5M</span>
+                                        <span>💬 35k</span>
+                                    </div>
+                                </div>
+                                <h3 class="article-headline">
+                                    <a href="#">Terbakarnya KM. Surya Hasil Laut 22 Akibat Kebocoran Pipa BBM</a>
+                                </h3>
+                                <div class="article-meta-bottom">
+                                    <a href="#" class="read-more-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-right-column">
+                        <div class="card">
+                            <h4>Data Grafik Kecelakaan</h4>
+                            <p>Perkiran jumlah insiden kapal berdasarkan jenisnya.</p>
+                            <div class="chart-wrapper">
+                                <canvas id="shipAccidentChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h4>Berita Terkait</h4>
+                            <div class="article-list">
+                                <div class="article-list-item">
+                                    <img class="article-list-image" src="asset/img/berita.jpg" alt="Berita 1">
+                                    <div class="article-list-content">
+                                        <a href="#">Kapal Angkatan Laut Tabrak Feri Penumpang</a>
+                                    </div>
+                                </div>
+                                <div class="article-list-item">
+                                    <img class="article-list-image" src="asset/img/beritakali.jpg" alt="Berita 2">
+                                    <div class="article-list-content">
+                                        <a href="#">Teknologi AIS Terbaru Tingkatkan Keamanan Navigasi</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sponsors-section" id="sponsors">
+            <div class="container">
+                <div class="sponsors-header">
+                    <h2 class="section-title">PARTNERS</h2>
+                    <p class="section-description">
+                        Meet our partners and clients
+                    </p>
+                </div>
+                <div class="sponsors-grid">
+                    <div class="sponsor-item"> <img src="asset/img/dipu.png" alt="Logo Vairis"> </div>
+                    <div class="sponsor-item"> <img src="asset/img/upi.png" alt="Logo High Peak"> </div>
+                    <div class="sponsor-item"> <img src="asset/img/bkul.png" alt="Logo Gamelove"> </div>
+                    <div class="sponsor-item"> <img src="asset/img/pertamina.png" alt="Logo Jellyfish"> </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="pre-footer">
+        <div class="container pre-footer-wrapper">
+            <div class="pre-footer-text">
+                <span>HEARD ENOUGH? →</span>
+                <h2>Contact us</h2>
+            </div>
+            <a href="#" class="contact-circle-btn">
+                <i data-feather="arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <h3 class="footer-brand-title">BEWAIS</h3>
+                </div>
+
+                <div class="footer-col location-col">
+                    <h4>SERANG</h4>
+                    <a href="mailto:labaisupiserang@upi.edu" class="footer-link">labaisupiserang@upi.edu</a>
+                    <p>08888888888</p>
+                    <p class="address">Jl. Ciracas No.38, Serang, Kec. Serang, Kota Serang, Banten 42116</p>
+                    <a href="https://www.google.com/maps/dir/Universitas+Pendidikan+Indonesia+(UPI)+Kampus+Serang,+Jalan+Ciracas,+Serang,+Serang+City,+Banten//@-6.1242868,106.1248101,13.75z/data=!4m8!4m7!1m5!1m1!1s0x2e418adaa4f7f563:0x950ec58123df8596!2m2!1d106.1466632!2d-6.125723!1m0?entry=ttu&g_ep=EgoyMDI1MDcwOC4wIKXMDSoASAFQAw%3D%3D" class="map-link">SEE ON MAP ↗</a>
+                </div>
+
+                <div class="footer-col location-col">
+                    <h4>BOJONEGORO</h4>
+                    <a href="mailto:bimakreasiutamalaut@gmail.com" class="footer-link">bimakreasiutamalaut@gmail.com</a>
+                    <p>0888888888</p>
+                    <p class="address">Bojonegoro, Serang, Banten</p>
+                    <a href="#" class="map-link">SEE ON MAP ↗</a>
+                </div>
+
+                <div class="footer-col actions-col">
+                    <h4>Discover the Future of Marine Safety</h4>
+                    <a href="#" class="newsletter-link">SIGN UP FOR OUR NEWSLETTER →</a>
+                    <div class="socials">
+                        <p class="follow-us">FOLLOW US</p>
+                        <div class="social-icons">
+                            <a href="#"><i data-feather="twitter"></i></a>
+                            <a href="#"><i data-feather="instagram"></i></a>
+                            <a href="#"><i data-feather="linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; bewais. All rights reserved 2025.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      feather.replace()
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script>
+        // Contoh script untuk Chart.js
+        const ctx = document.getElementById('shipAccidentChart');
+        if (ctx) {
+            new Chart(ctx, {
+                type: 'bar', // atau 'line', 'pie'
+                data: {
+                    labels: ['Kapal Tanker', 'Kapal Kargo', 'Kapal Ikan', 'Lainnya'],
+                    datasets: [{
+                        label: '# of Incidents',
+                        data: [12, 19, 3, 5],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: { scales: { y: { beginAtZero: true } } }
+            });
+        }
+    </script>
+</body>
+</html>
